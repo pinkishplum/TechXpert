@@ -4,5 +4,11 @@ class Review:
         self.rating = rating
         self.comment = comment
 
-    def __str__(self):
-        return f'{self.user.name} rated this course {self.rating} and said: {self.comment}'
+    def update_review(self, rating, comment):
+        self.rating = rating
+        self.comment = comment
+
+    def set_instructor_response(self, response):
+        self.instructor_response = response
+
+

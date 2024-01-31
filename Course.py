@@ -37,3 +37,29 @@ class Course:
     def get_number_of_registered_courses(self):
         return len(self.courses)
 
+
+    def display_reviews(self):
+         for review in self.reviews:
+            print(str(review))
+
+    def add_course_material(self, material):
+        self.course_materials.append(material)
+
+    def get_course_materials(self):
+        return self.course_materials
+
+    def schedule_live_session(self, session):
+        self.live_sessions.append(session)
+
+    def get_live_sessions(self):
+        return self.live_sessions
+
+    def get_average_rating(self):
+        return self.rating_sum / self.num_ratings if self.num_ratings > 0 else 0
+
+    def get_number_of_registered_students(self):
+        return len(self.students)
+
+    def display_reviews(self):
+        for review in self.reviews:
+            print(str(review))
