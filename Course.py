@@ -16,16 +16,16 @@ class Course:
     def get_reviews(self):
         return self.reviews
 
-    def addCourse(self, course):
+    def add_course(self, course):
         self.courses.append(course)
 
-    def deleteCourse(self, course):
+    def delete_course(self, course):
         self.courses.remove(course)
 
-    def getCourses(self):
+    def get_courses(self):
         return self.courses
 
-    def SearchCourse(self, course):
+    def search_course(self, course):
         for i in self.courses:
             if i.name == course:
                 return i
