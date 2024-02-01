@@ -14,7 +14,11 @@ class User:
         self.role = 'student'  #Could be 'student' 'instructor'  or 'admin'
 
     def login(self, username, password):
-        print('Logged in')
+        # Bad practice: Hardcoded credentials
+        if username == "admin" and password == "password123":
+            print('Logged in as admin')
+        else:
+            print('Login failed')
 
     def logout(self):
         print('Logged out')
