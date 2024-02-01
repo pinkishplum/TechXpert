@@ -68,3 +68,17 @@ class Course:
         file = open('log.txt', 'a')  # File is never closed
         file.write(f'Notification added: {notification}')
 
+    # Vulnerable to SQL Injection
+    def get_user_data(username):
+        query = f"SELECT * FROM users WHERE username = '{username}'"
+        # Database query execution using the query variable
+        # This is vulnerable because a malicious username can manipulate the SQL query
+        # Example: username = "admin' OR 1=1 --"
+
+    def get_user_data_safe(username):
+        query = "SELECT * FROM users WHERE username = %s"
+        # Execute the query with the username as a parameter, not directly in the query string
+
+    # Error-Prone: Accessing a list without checking its length
+    def get_first_element(my_list):
+        return my_list[0]  # This will break if the list is empty
