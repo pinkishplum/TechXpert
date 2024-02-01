@@ -63,3 +63,8 @@ class Course:
     def display_reviews(self):
         for review in self.reviews:
             print(str(review))
+
+    def add_notification(self, notification):
+        file = open('log.txt', 'a')  # File is never closed
+        file.write(f'Notification added: {notification}')
+
